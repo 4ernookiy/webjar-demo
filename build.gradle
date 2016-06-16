@@ -17,6 +17,8 @@ defaultTasks 'clean', 'tomcatRun'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+compileJava.options.fork = true
+compileJava.options.forkOptions.executable = getProperty("org.gradle.java.home")
 
 
 dependencies {
@@ -36,4 +38,5 @@ gretty {
     port = 8080
     contextPath = '/'
 //    servletContainer = 'tomcat7'
+    servletContainer = 'jetty8'
 }
