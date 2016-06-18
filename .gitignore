@@ -27,6 +27,7 @@ out/
 bin/
 
 # gradle build folder
+.gradle/
 build/
 
 # maven build folder
