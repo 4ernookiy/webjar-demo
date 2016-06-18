@@ -17,8 +17,8 @@ defaultTasks 'clean', 'tomcatRun'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-compileJava.options.fork = true
-compileJava.options.forkOptions.executable = getProperty("org.gradle.java.home")
+//compileJava.options.fork = true
+//compileJava.options.forkOptions.executable = getProperty("org.gradle.java.home")
 
 
 dependencies {
