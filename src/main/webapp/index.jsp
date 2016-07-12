@@ -91,7 +91,7 @@
                     <th>CRJ-100/200 LR</th>
                     <th>Embraer 195</th>
                     <th>Embraer 175</th>
-                    <th>ТU -154 М</th>
+                    <th>TU-154M</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -170,7 +170,7 @@
         </div>
         <div class="col-md-7 col-md-pull-5">
             <img class="featurette-image img-fluid center-block" style="width: 600px; height: 270px;"
-                 src="file://c:/3/belavia/pwBoeing.jpg" data-holder-rendered="true">
+                 src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/belavia/pwBoeing.jpg" data-holder-rendered="true">
         </div>
     </div>
 
@@ -200,7 +200,7 @@
         </div>
         <div class="col-md-7 col-md-pull-5">
             <img class="featurette-image img-fluid center-block" style="width: 600px; height: 270px;"
-                 src="file://c:/3/belavia/pwEmbraer.jpg" data-holder-rendered="true">
+                 src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/belavia/pwEmbraer.jpg" data-holder-rendered="true">
         </div>
     </div>
 
@@ -211,36 +211,12 @@
 
     <!-- FOOTER -->
     <footer>
-        <p class="pull-xs-right"><a href="http://v4-alpha.getbootstrap.com/examples/carousel/#">Back to top</a></p>
-        <p>© 2014 Company, Inc. · <a href="http://v4-alpha.getbootstrap.com/examples/carousel/#">Privacy</a> · <a
-                href="http://v4-alpha.getbootstrap.com/examples/carousel/#">Terms</a></p>
+        <p class="pull-xs-right"><a href="${pageContext.request.contextPath}/#">Back to top</a></p>
+        <%--<p>© 2014 Company, Inc. · <a href="http://v4-alpha.getbootstrap.com/examples/carousel/#">Privacy</a> · <a--%>
+                <%--href="http://v4-alpha.getbootstrap.com/examples/carousel/#">Terms</a></p>--%>
     </footer>
 
 </div><!-- /.container -->
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="./Carousel Template for Bootstrap_files/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="./Carousel Template for Bootstrap_files/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="./Carousel Template for Bootstrap_files/holder.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="./Carousel Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
-
-
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none"
-     style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
-    <defs>
-        <style type="text/css"></style>
-    </defs>
-    <text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">
-        500x500
-    </text>
-</svg>
-
 <jsp:include page="jsp/import_js.jsp"/>
 
 </body>

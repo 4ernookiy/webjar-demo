@@ -55,13 +55,3 @@ localhost:8080/
 ```
 
 
-
-https://blogs.oracle.com/alexismp/entry/web_inf_lib_jar_meta
-
-JSRs: Java Specification Requests
-JSR 315: JavaTM Servlet 3.0 Specification
-https://jcp.org/en/jsr/detail?id=315
-
-
-
-web.xml пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ servlet specification 3 (http://stackoverflow.com/questions/11215962/resources-in-meta-inf-resources-not-found-and-return-404)
