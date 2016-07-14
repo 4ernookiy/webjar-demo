@@ -14,20 +14,24 @@ repositories {
     mavenCentral()
 }
 
-defaultTasks 'clean', 'jettyRun'
-//'tomcatRun'
+defaultTasks 'clean', 'tomcatRun'
+// 'jettyRun'
+// 'tomcatRun'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 //compileJava.options.fork = true
 //compileJava.options.forkOptions.executable = getProperty("org.gradle.java.home")
-
+war {
+    dependencies {
+        runtime project(':static-data')
+    }
+}
 
 dependencies {
 //    compile 'd4.demo:static-data:0.1.0-SNAPSHOT'
     compile project(':static-data')
-
 
     compile 'org.webjars:bootstrap:4.0.0-alpha.2'
     compile 'org.webjars:jquery:3.0.0'
@@ -35,16 +39,28 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
     compile group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.7.21'
-
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
-
 //    testCompile group: 'junit', name: 'junit', version: '4.11'
 
+}
+
+/*
+tomcatRun {
+println("copy file")
+	def slj = "${buildDir}/inplaceWebapp/WEB-INF/lib"
+	println ("slj=$slj")
+	into(slj) {
+		from (project(':static-data').buildDir){
+		include 'libs/**' 
+		}
+		}
 
 }
+*/
+
 gretty {
     port = 8080
     contextPath = '/'
-//    servletContainer = 'tomcat8'
-    servletContainer = 'jetty8'
+    servletContainer = 'tomcat8'
+//    servletContainer = 'jetty8'
 }

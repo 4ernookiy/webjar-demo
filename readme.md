@@ -29,10 +29,10 @@ SC_NOT_FOUND(404) response
 Важно - только по этому пути будут опубликованы ресурсы из каждого jar файла
 > META-INF/resources
 
-# Webjar
+# ([webjars.org](http://webjars.org))
 Так как иметь возможность подключать ресурсы в виде зависимости это удобно - это быстро осознали многие люди и одним из первых был James Ward ([linkedin](https://www.linkedin.com/in/jamesward)).
 С его деятельностью я познакомился когда занимался Flex.
-Имеено он и организовал проект webjars.org
+Имеено он и организовал проект  ([webjars.org](http://webjars.org))
 На данном сайте собраны примеры использования jar файлов в различных ситуациях - рекомендую глянуть.
 Также многие библиотеки **уже** можно найти в репозитории мавена http://mvnrepository.com/artifact/org.webjars
 
@@ -54,4 +54,9 @@ $ gradlew.bat
 localhost:8080/
 ```
 
-
+# анализ примера 
+выполнить 
+```cmd
+$ gradlew.bat build
+```
+перейти в /build/libs
