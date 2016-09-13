@@ -1,5 +1,5 @@
 plugins {
-    id "org.akhikhl.gretty" version "1.2.4"
+    id "org.akhikhl.gretty" version "1.4.0"
 }
 
 apply plugin: 'java'
@@ -14,8 +14,9 @@ repositories {
     mavenCentral()
 }
 
-defaultTasks 'clean', 'tomcatRun'
-// 'jettyRun'
+defaultTasks 'clean',
+//        'tomcatRun'
+ 'jettyRun'
 // 'tomcatRun'
 
 sourceCompatibility = 1.8
@@ -24,11 +25,10 @@ targetCompatibility = 1.8
 //compileJava.options.fork = true
 //compileJava.options.forkOptions.executable = getProperty("org.gradle.java.home")
 war {
-    dependencies {
-        runtime project(':static-data')
-    }
+//    dependencies {
+//        compile project(':static-data')
+//    }
 }
-
 dependencies {
 //    compile 'd4.demo:static-data:0.1.0-SNAPSHOT'
     compile project(':static-data')
@@ -61,6 +61,6 @@ println("copy file")
 gretty {
     port = 8080
     contextPath = '/'
-    servletContainer = 'tomcat8'
-//    servletContainer = 'jetty8'
+//    servletContainer = 'tomcat8'
+    servletContainer = 'jetty8'
 }

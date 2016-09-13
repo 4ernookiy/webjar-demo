@@ -3,9 +3,13 @@ apply plugin: 'java'
 group 'd4.demo'
 version '0.1.0'
 
-
+processResources {
+    from(fileTree("webjar")) {
+        into "META-INF/resources"
+    }
+}
 jar { 
-    from(fileTree("webjar")) {  
-        into "META-INF/resources" 
-    } 
+//    from(fileTree("webjar")) {
+//        into "META-INF/resources"
+//    }
 }
