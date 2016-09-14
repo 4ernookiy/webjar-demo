@@ -25,16 +25,18 @@ targetCompatibility = 1.8
 //compileJava.options.fork = true
 //compileJava.options.forkOptions.executable = getProperty("org.gradle.java.home")
 war {
-//    dependencies {
-//        compile project(':static-data')
-//    }
+    dependencies {
+        compile project(':static-data')
+    }
 }
 dependencies {
 //    compile 'd4.demo:static-data:0.1.0-SNAPSHOT'
-    compile project(':static-data')
+ 	//compile project(path: ':static-data', configuration: 'published')
+     compile project(':static-data')
+    // compile module(':static-data:0.1.0')
 
     compile 'org.webjars:bootstrap:4.0.0-alpha.2'
-    compile 'org.webjars:jquery:3.0.0'
+    compile 'org.webjars:jquery:1.12.4'
 
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
@@ -42,6 +44,12 @@ dependencies {
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 //    testCompile group: 'junit', name: 'junit', version: '4.11'
 
+}
+
+println configurations.compile.name
+
+task listJars << {
+    configurations.compile.each { File file -> println file.name }
 }
 
 /*
@@ -59,7 +67,7 @@ println("copy file")
 */
 
 gretty {
-    port = 8080
+    port = 8180
     contextPath = '/'
 //    servletContainer = 'tomcat8'
     servletContainer = 'jetty8'
