@@ -31,12 +31,15 @@
 
     <logger name="org.springframework" level="DEBUG" additivity="false">
         <appender-ref ref="a_console"/>
+        <appender-ref ref="a_file"/>
     </logger>
     <logger name="org.springframework.context" level="ERROR" additivity="false">
         <appender-ref ref="a_console"/>
+        <appender-ref ref="a_file"/>
     </logger>
     <logger name="org.springframework.web" level="ERROR" additivity="false">
         <appender-ref ref="a_console"/>
+        <appender-ref ref="a_file"/>
     </logger>
 
     <logger name="org.hibernate.sql" level="DEBUG" additivity="false" >
@@ -48,5 +51,6 @@
 
     <root level="DEBUG">
         <appender-ref ref="a_console"/>
+        <appender-ref ref="a_file"/>
     </root>
 </configuration>
