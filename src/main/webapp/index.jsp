@@ -31,11 +31,10 @@
             <img class="first-slide" src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/maxresdefault2.jpg" alt="First slide">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
-                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="http://v4-alpha.getbootstrap.com/examples/carousel/#"
-                          role="button">Learn more</a></p>
+                    <h1>Webjars. demo app</h1>
+                    <p>Automatic static resource publication.</p>
+                    <p><a class="btn btn-lg btn-primary" href="http://en.belavia.by/company/air_fleet/"
+                          role="button">Aircraft Fleet Belavia</a></p>
                 </div>
             </div>
         </div>
@@ -59,27 +58,6 @@
 <div class="container marketing">
     <hr class="featurette-divider">
     <div class="row featurette">
-        <div class="col-md-5 col-md-push-7">
-            <h2 class="">CRJ-100/200</h2>
-            <table class="table table-reflow">
-                <thead>
-                <tr>
-                    <th>Manufacturer</th>
-                    <th>Model</th>
-                    <th>Engine type</th>
-                    <th>Configuration</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Bombardier (Canada)</td>
-                    <td>CRJ-200 LR</td>
-                    <td>General Electric CF34-3B1</td>
-                    <td>50 seats of the economy class</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
         <div class="col-md-4 col-md-pull-3">
             <h2 class="">Aircraft Fleet BELAVIA</h2>
             <table class="table table-reflow fleet">
@@ -107,107 +85,125 @@
                 </tbody>
             </table>
         </div>
-
-
     </div>
 
     <!-- START THE FEATURETTES -->
 
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-5 col-md-push-7">
-            <h2 class="">CRJ-100/200</h2>
-            <table class="table table-reflow">
-                <thead>
-                <tr>
-                    <th>Manufacturer</th>
-                    <th>Model</th>
-                    <th>Engine type</th>
-                    <th>Configuration</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Bombardier (Canada)</td>
-                    <td>CRJ-200 LR</td>
-                    <td>General Electric CF34-3B1</td>
-                    <td>50 seats of the economy class</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-md-7 col-md-pull-5">
-            <img class="featurette-image img-fluid center-block" style="width: 600px; height: 270px;"
-                 src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/belavia/pwCRJ.jpg" data-holder-rendered="true">
-        </div>
-    </div>
 
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-5 col-md-push-7">
-            <h2 class="">Boeing 737-300/500/800</h2>
-            <table class="table table-reflow">
-                <thead>
-                <tr>
-                    <th>Manufacturer</th>
-                    <th>Model</th>
-                    <th>Engine type</th>
-                    <th>Configuration</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Boeing (USA)</td>
-                    <td>737-500</td>
-                    <td>CFM International CFM56-3C-1</td>
-                    <td>104-120 seats</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-md-7 col-md-pull-5">
-            <img class="featurette-image img-fluid center-block" style="width: 600px; height: 270px;"
-                 src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/belavia/pwBoeing.jpg" data-holder-rendered="true">
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-5 col-md-push-7">
-            <h2 class="">Embraer E-175/195</h2>
-            <table class="table table-reflow">
-                <thead>
-                <tr>
-                    <th>Manufacturer</th>
-                    <th>Model</th>
-                    <th>Engine type</th>
-                    <th>Configuration</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Embraer (Brazil)</td>
-                    <td>Embraer E-195</td>
-                    <td>General Electric CF34-10E5</td>
-                    <td>11 seats of the business class <br>96 seats of the economy class</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-md-7 col-md-pull-5">
-            <img class="featurette-image img-fluid center-block" style="width: 600px; height: 270px;"
-                 src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/belavia/pwEmbraer.jpg" data-holder-rendered="true">
-        </div>
-    </div>
 
     <hr class="featurette-divider">
 
     <!-- /END THE FEATURETTES -->
 
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#crj200" role="tab">CRJ-100/200</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#b737" role="tab">Boeing 737-300/500/800</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#embraer" role="tab">Embraer E-175/195</a>
+        </li>
+    </ul>
+
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="crj200" role="tabpanel">
+            <div class="row featurette">
+                <div class="col-md-5 col-md-push-7">
+                    <h2 class="">CRJ-100/200</h2>
+                    <table class="table table-reflow">
+                        <thead>
+                        <tr>
+                            <th>Manufacturer</th>
+                            <th>Model</th>
+                            <th>Engine type</th>
+                            <th>Configuration</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Bombardier (Canada)</td>
+                            <td>CRJ-200 LR</td>
+                            <td>General Electric CF34-3B1</td>
+                            <td>50 seats of the economy class</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-7 col-md-pull-5">
+                    <img class="featurette-image img-fluid center-block" style="width: 600px; height: 270px;"
+                         src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/belavia/pwCRJ.jpg" data-holder-rendered="true">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="b737" role="tabpanel">
+            <div class="row featurette">
+                <div class="col-md-5 col-md-push-7">
+                    <h2 class="">Boeing 737-300/500/800</h2>
+                    <table class="table table-reflow">
+                        <thead>
+                        <tr>
+                            <th>Manufacturer</th>
+                            <th>Model</th>
+                            <th>Engine type</th>
+                            <th>Configuration</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Boeing (USA)</td>
+                            <td>737-500</td>
+                            <td>CFM International CFM56-3C-1</td>
+                            <td>104-120 seats</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-7 col-md-pull-5">
+                    <img class="featurette-image img-fluid center-block" style="width: 600px; height: 270px;"
+                         src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/belavia/pwBoeing.jpg" data-holder-rendered="true">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="embraer" role="tabpanel">
+            <div class="row featurette">
+                <div class="col-md-5 col-md-push-7">
+                    <h2 class="">Embraer E-175/195</h2>
+                    <table class="table table-reflow">
+                        <thead>
+                        <tr>
+                            <th>Manufacturer</th>
+                            <th>Model</th>
+                            <th>Engine type</th>
+                            <th>Configuration</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Embraer (Brazil)</td>
+                            <td>Embraer E-195</td>
+                            <td>General Electric CF34-10E5</td>
+                            <td>11 seats of the business class <br>96 seats of the economy class</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-7 col-md-pull-5">
+                    <img class="featurette-image img-fluid center-block" style="width: 600px; height: 270px;"
+                         src="${pageContext.request.contextPath}/webjars/example/1.0.0/img/belavia/pwEmbraer.jpg" data-holder-rendered="true">
+                </div>
+            </div>
+        </div>
+        <%--<div class="tab-pane" id="settings" role="tabpanel">--%>
+
+        <%--</div>--%>
+        <%--<div class="tab-pane" id="settings1" role="tabpanel">...</div>--%>
+    </div>
 
     <!-- FOOTER -->
     <footer>
