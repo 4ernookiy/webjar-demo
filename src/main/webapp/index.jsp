@@ -85,6 +85,17 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="col-md-4 col-md-pull-3">
+            <h2 class="">Loaded resources</h2>
+            <table class="table table-reflow fleet">
+                <tbody>
+                <tr id="data">
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
     <!-- START THE FEATURETTES -->
@@ -204,6 +215,17 @@
         <%--</div>--%>
         <%--<div class="tab-pane" id="settings1" role="tabpanel">...</div>--%>
     </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+
+        <div id="mylog" class="col-md-12 col-md-pull-6">
+            <h2 class="">Errors</h2>
+        </div>
+
+    </div>
+
 
     <!-- FOOTER -->
     <footer>
