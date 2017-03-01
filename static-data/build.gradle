@@ -7,8 +7,31 @@ processResources {
 //        into "META-INF/resources"
 //    }
 }
-jar { 
-//    from(fileTree("webjar")) {
-//        into "META-INF/resources"
-//    }
+
+task copyTask(type: Copy) {
+	//from 'fileTree("webjars")' 
+    //into "build/resources/main/META-INF"
+//    from 'src/main/webapp'
+//into 'build/explodedWar'
 }
+
+jar { 
+
+ /*from ('./src/main/java') {
+    include 'META-INF/services/org.example.plugins.PluginService'
+  }*/
+/*	exclude "src/main/resources/webjars"
+    from(fileTree("src/main/resources")) {
+        into "META-INF/resources"
+    }*/
+
+	manifest {
+		attributes 'company-module': 'static-data',
+                   'version': version
+				   //from(fileTree("webjars"))
+//	    include "${otherpattern}"
+	    //filter { ... }
+  	}
+}
+
+//jar.dependsOn copyTask       

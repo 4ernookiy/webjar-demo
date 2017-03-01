@@ -1,6 +1,6 @@
-plugins {
+/*plugins {
     id "org.akhikhl.gretty" version "1.4.0"
-}
+}*/
 
 apply plugin: 'java'
 apply plugin: 'war'
@@ -8,16 +8,31 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'eclipse-wtp'
 
+eclipse {
+    project {    
+        linkedResource name: 'src/main/webapp/webjars', type: '2', location: new File(project(':static-data').projectDir, 'src/main/resources/META-INF/resources/webjars').absolutePath
+        /* linkedResource name: 'src/main/webapp', type: '1', location: new File(projectDir, 'src/main/webapp').absolutePath */
+    }
+     /*wtp {
+        component {
+            resource sourcePath: "src/main/webapp", deployPath: '/'
+        }
+    }*/
+}
+
+
 group 'd4.demo'
 version '1.0.0'
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
-defaultTasks 'clean',
+defaultTasks 'clean'
+//, 'build'
 //        'tomcatRun'
- 'jettyRun'
+//  'jettyRun'
 // 'tomcatRun'
 
 sourceCompatibility = 1.8
@@ -58,10 +73,11 @@ println("copy file")
 
 }
 */
-
+/*
 gretty {
     port = 8180
     contextPath = '/'
 //    servletContainer = 'tomcat8'
     servletContainer = 'jetty8'
 }
+*/
